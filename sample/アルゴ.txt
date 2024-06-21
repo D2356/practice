@@ -1,0 +1,3 @@
+.td_nummber
+１クリックしたらval_inputに追加
+２tr_char.click後：if (val_input.textContent != ''){ val_input.textContentを’’にして.td_nummberをval_input.textContentに代入｝
