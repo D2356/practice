@@ -21,12 +21,69 @@ td_array.forEach(function(e){
     console.log("FRFF")
 }
 )
-
 })
-console.log(td_array);
-console.log(tr_char);
-console.log(td_number);
-console.log(td_number_array);
+//tr_charクリック後の判定
+function charCheck() {
+  if (val_input.textContent != ''){
+    val_formula.textContent += val_input.textContent;
+    val_input.textContent = ''; 
+  }else{
+    console.log("GGG");
+    return;
+  }
+}
+
+
+let tr_char_array = Array.from(tr_char);
+tr_char_array.forEach(function(e) {
+  e.addEventListener('click', function() {
+    let cl_char = this.textContent;
+    switch(cl_char) {
+      case '%':
+        charCheck();
+        console.log("ddd");
+        break;
+      case '✓':
+        console.log("✓");
+        break;
+      case 'x2':
+        console.log("x2");
+        break;
+      case '1/x':
+        console.log("1/x")
+        break;
+       case 'CE':
+        console.log("CE")
+        break;
+      case 'C':
+        console.log("C")
+        break;
+      case '⇚':
+        console.log("⇚")
+        break;
+      case '/':
+        console.log("/")
+        break;
+       case '*':
+        console.log("*")
+        break;
+      case '-':
+        console.log("-")
+        break;
+      case '+':
+        console.log("+")
+        break;
+      case '+/-':
+        console.log("+/-")
+        break;
+      case '=':
+        console.log("=")
+        break;
+      default:
+        console("!");
+            }
+  })
+})
 
 //CEの処理
 //Cの処理
